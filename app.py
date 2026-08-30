@@ -196,7 +196,7 @@ with st.sidebar:
     st.divider()
     st.caption("Prototype demonstration only — not a certified driving-safety device.")
 
-RTC = RTCConfiguration({"iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]})
+RTC = RTCConfiguration({"iceServers": []})
 ctx = webrtc_streamer(
     key="aethrix-drowsiness-v2", mode=WebRtcMode.SENDRECV,
     rtc_configuration=RTC, media_stream_constraints={"video": True, "audio": False},
