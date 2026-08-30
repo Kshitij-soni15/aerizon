@@ -206,9 +206,8 @@ ctx = webrtc_streamer(
 if ctx.video_processor:
     if st.button("🎯 Calibrate Driver Baseline", use_container_width=True):
         ctx.video_processor.calibrate()
-        st.rerun()
 
-    @st.fragment(run_every="0.5s")
+    @st.fragment(run_every="1s")
     def live_dashboard():
         state = ctx.video_processor.get_state()
 
